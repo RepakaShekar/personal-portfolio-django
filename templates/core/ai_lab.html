@@ -1,0 +1,53 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<h2>{% block title %}AI Lab — LifeSync AI{% endblock %}</h2>
+
+<p class="mb-4">
+LifeSync AI is my personal AI system built using Python.
+It helps me prioritize work, analyze freelance projects,
+plan content, and make better decisions — always with human approval.
+</p>
+
+<div class="alert alert-info">
+  <strong>Note:</strong> LifeSync AI is a real, evolving AI system built in Python.
+  All actions require human approval.
+</div>
+
+
+<h4>Core Capabilities</h4>
+
+<div class="row">
+  {% for feature in features %}
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ feature.title }}</h5>
+          <p class="card-text">{{ feature.description }}</p>
+
+          {% if feature.example %}
+            <p><strong>Example:</strong> {{ feature.example }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<hr>
+
+<h4>How It Works</h4>
+<ul>
+  <li>User provides a situation or goal</li>
+  <li>AI analyzes context and priorities</li>
+  <li>AI suggests an action</li>
+  <li>User approval is required</li>
+  <li>Only approved actions are executed</li>
+</ul>
+
+<p class="mt-3">
+This system is continuously evolving as I learn more about AI,
+backend systems, and automation.
+</p>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<h2>{% block title %}Projects{% endblock %}</h2>
+
+<div class="row">
+  {% for project in projects %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          <p><strong>Tech:</strong> {{ project.tech_stack }}</p>
+
+          {% if project.github_link %}
+            <a href="{{ project.github_link }}" target="_blank">GitHub</a>
+          {% endif %}
+
+          {% if project.live_link %}
+            | <a href="{{ project.live_link }}" target="_blank">Live</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

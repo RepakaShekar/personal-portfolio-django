@@ -1,0 +1,39 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<h2>{% block title %}Services{% endblock %}</h2>
+<p class="mb-4">
+I offer backend development, data solutions, and AI-powered systems.
+Each service is customized based on your needs.
+</p>
+
+<div class="row">
+  {% for service in services %}
+  <div class="card h-100 shadow-sm border-0">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+        {% if service.badge == 'popular' %}
+        <span class="badge bg-primary mb-2">Popular</span>
+        {% elif service.badge == 'premium' %}
+        <span class="badge bg-warning text-dark mb-2">Premium</span>
+        {% elif service.badge == 'new' %}
+        <span class="badge bg-success mb-2">New</span>
+        {% endif %}
+          <h5 class="card-title mt-2"><i class="fa-solid fa-code"></i> {{ service.title }}</h5>
+          <p class="card-text">{{ service.description }}</p>
+          <p class="fw-bold text-success">Price: {{ service.price }}</p>
+
+          <ul>
+            {% for feature in service.feature_list %}
+              <li><i class="fa-solid fa-check text-success"></i> {{ feature }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

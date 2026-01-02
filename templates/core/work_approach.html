@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+{% block title %}My Work Approach | Shekar Repaka{% endblock %}
+{% block content %}
+
+<h2 class="mb-4">My Work Approach</h2>
+
+<p class="mb-4">
+This section explains how I approach projects, communicate with clients,
+and ensure quality delivery. Transparency and clarity are my priorities.
+</p>
+
+<div class="row">
+  {% for item in approaches %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <i class="fa-solid {{ item.icon }} fa-2x mb-3 text-primary"></i>
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

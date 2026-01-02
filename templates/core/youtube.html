@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<h2>{% block title %}YouTube  & Learning Journey{% endblock %}</h2>
+
+<p class="mb-4">
+I document my backend, AI, and freelancing journey on YouTube.
+This channel focuses on real projects, real learning, and long-term growth.
+</p>
+
+<div class="row">
+  {% for video in videos %}
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ video.title }}</h5>
+          <p class="card-text">{{ video.description }}</p>
+          <a href="{{ video.video_url }}" target="_blank" class="btn btn-danger">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

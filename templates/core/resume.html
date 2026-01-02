@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<h2>{% block title %}Resume{% endblock %}</h2>
+
+<p>
+You can download my resume to learn more about my experience,
+skills, and projects.
+</p>
+
+{% if resume %}
+  <a href="{{ resume.file.url }}" class="btn btn-success" download>
+    Download Resume (PDF)
+  </a>
+{% else %}
+  <p>Resume not available yet.</p>
+{% endif %}
+
+{% endblock %}

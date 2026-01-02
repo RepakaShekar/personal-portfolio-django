@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<h2>{% block title %}Contact{% endblock %}</h2>
+
+<p>
+If you'd like to work together, discuss a project, or ask a question,
+feel free to send me a message.
+</p>
+
+{% if success %}
+  <div class="alert alert-success">
+    Thank you! Your message has been sent successfully.
+  </div>
+{% endif %}
+
+<div class="card shadow-sm p-4">
+<form method="post" class="mt-4">
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    {{ form.name }}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    {{ form.email }}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Message</label>
+    {{ form.message }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    Send Message
+  </button>
+</form>
+</div>
+
+{% endblock %}

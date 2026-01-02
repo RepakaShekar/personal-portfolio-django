@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% block title %}LifeSync AI Demo{% endblock %}
+{% block content %}
+
+<h2>LifeSync AI Demo</h2>
+
+<p>This is a suggestion-based demo. No actions are performed automatically.</p>
+<p class="text-muted">This AI provides suggestions only. No actions are taken without user approval.</p>
+
+
+<form method="post">
+  {% csrf_token %}
+  <textarea name="situation" class="form-control mb-3" placeholder="Describe your situation"></textarea>
+  <button class="btn btn-primary">Get AI Suggestion</button>
+</form>
+
+{% if suggestion %}
+  <div class="alert alert-info mt-4">
+    {{ suggestion }}
+  </div>
+{% endif %}
+
+{% endblock %}
