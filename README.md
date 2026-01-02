@@ -47,3 +47,19 @@ venv\Scripts\activate
 pip install -r requirements.txt
 python manage.py runserver
 
+---
+
+👤 Author
+
+Shekar Repaka  
+Python Backend Developer & AI Enthusiast  
+
+- Portfolio: (add your website URL once deployed)
+- GitHub: https://github.com/YOUR_USERNAME
+- LinkedIn: (optional)
+
+---
+
+ 📄 License
+
+This project is licensed under the MIT License.
