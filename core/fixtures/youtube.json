@@ -1,0 +1,12 @@
+[
+  {
+    "model": "core.youtube",
+    "pk": 1,
+    "fields": {
+      "title": "Django Portfolio Build – Day 1",
+      "description": "Building a real portfolio from scratch",
+      "video_url": "https://youtube.com/",
+      "is_active": true
+    }
+  }
+]

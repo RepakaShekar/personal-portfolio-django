@@ -1,0 +1,22 @@
+[
+  {
+    "model": "core.workapproach",
+    "pk": 1,
+    "fields": {
+      "title": "Clear Communication",
+      "description": "Regular updates and clarity at every stage",
+      "icon": "fa-comments",
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.workapproach",
+    "pk": 2,
+    "fields": {
+      "title": "Clean Code",
+      "description": "Readable and maintainable backend code",
+      "icon": "fa-code",
+      "is_active": true
+    }
+  }
+]

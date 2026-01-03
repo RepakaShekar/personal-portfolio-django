@@ -1,0 +1,11 @@
+[
+  {
+    "model": "core.ailab",
+    "pk": 1,
+    "fields": {
+      "title": "LifeSync AI",
+      "description": "A suggestion-based AI assistant with human approval",
+      "is_active": true
+    }
+  }
+]

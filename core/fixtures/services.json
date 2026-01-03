@@ -1,0 +1,22 @@
+[
+  {
+    "model": "core.service",
+    "pk": 1,
+    "fields": {
+      "title": "Python Backend Development",
+      "description": "Django, REST APIs, authentication, databases",
+      "price": "₹999",
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 2,
+    "fields": {
+      "title": "AI Automation & Tools",
+      "description": "Productivity tools, AI agents, workflow automation",
+      "price": "₹1499",
+      "is_active": true
+    }
+  }
+]

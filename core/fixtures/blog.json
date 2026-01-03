@@ -1,0 +1,11 @@
+[
+  {
+    "model": "core.blog",
+    "pk": 1,
+    "fields": {
+      "title": "Why I Built This Portfolio",
+      "content": "This portfolio is a reflection of my backend and AI learning journey.",
+      "is_published": true
+    }
+  }
+]
