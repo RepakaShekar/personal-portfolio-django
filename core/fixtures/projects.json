@@ -6,8 +6,7 @@
       "title": "Personal Portfolio Website",
       "description": "Django-based portfolio with AI Lab and blog",
       "tech_stack": "Python, Django, Bootstrap",
-      "github_link": "https://github.com/RepakaShekar",
-      "is_active": true
+      "github_link": "https://github.com/RepakaShekar"
     }
   },
   {
@@ -17,8 +16,7 @@
       "title": "LifeSync AI",
       "description": "AI assistant for task prioritization and learning",
       "tech_stack": "Python, ML, Django",
-      "github_link": "https://github.com/RepakaShekar",
-      "is_active": true
+      "github_link": "https://github.com/RepakaShekar"
     }
   }
 ]
