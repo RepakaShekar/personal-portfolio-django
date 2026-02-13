@@ -3,6 +3,10 @@
 from django.shortcuts import render
 from .models import Project, Service, YouTubeVideo, AIFeature, Resume, WorkApproach, Blog
 from .forms import ContactForm
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .models import Project
+from .serializers import ProjectSerializer
 
 def home(request):
     return render(request, 'core/home.html')
@@ -96,4 +100,10 @@ def ai_demo(request):
 
 
 
+
+@api_view(['GET'])
+def project_list_api(request):
+    projects = Project.objects.all()
+    serializer = ProjectSerializer(projects, many=True)
+    return Response(serializer.data)
 

@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import project_list_api
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -13,5 +14,7 @@ urlpatterns = [
     path('resume/', views.resume, name='resume'),
     path('work-approach/', views.work_approach, name='work_approach'),
     path('ai-demo/', views.ai_demo, name='ai_demo'),
+     path('api/projects/', project_list_api, name='api-projects'),
 ]
+
 
