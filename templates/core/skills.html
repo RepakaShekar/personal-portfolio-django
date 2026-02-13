@@ -1,15 +1,55 @@
 {% extends "core/base.html" %}
+{% block title %}My Skills{% endblock %}
+
 {% block content %}
 
-<h2>My Skills</h2>
+<section class="mb-24">
 
-<ul>
-  <li>Python</li>
-  <li>Django & FastAPI</li>
-  <li>REST APIs & JWT</li>
-  <li>Web Scraping</li>
-  <li>Data Analysis & Dashboards</li>
-  <li>AI Agent Systems</li>
-</ul>
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      My Skills
+    </h2>
+    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+      Technologies and systems I use to build scalable backend architectures and intelligent automation tools.
+    </p>
+  </div>
+
+  <!-- Skills Grid -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+    <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-indigo-400 transition text-center">
+      <span class="text-indigo-400 text-2xl">🐍</span>
+      <h3 class="text-lg font-semibold mt-3 text-white">Python</h3>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-indigo-400 transition text-center">
+      <span class="text-purple-400 text-2xl">⚙️</span>
+      <h3 class="text-lg font-semibold mt-3 text-white">Django & FastAPI</h3>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-indigo-400 transition text-center">
+      <span class="text-cyan-400 text-2xl">🔐</span>
+      <h3 class="text-lg font-semibold mt-3 text-white">REST APIs & JWT</h3>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-indigo-400 transition text-center">
+      <span class="text-green-400 text-2xl">🕸️</span>
+      <h3 class="text-lg font-semibold mt-3 text-white">Web Scraping</h3>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-indigo-400 transition text-center">
+      <span class="text-yellow-400 text-2xl">📊</span>
+      <h3 class="text-lg font-semibold mt-3 text-white">Data Analysis & Dashboards</h3>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-indigo-400 transition text-center">
+      <span class="text-red-400 text-2xl">🤖</span>
+      <h3 class="text-lg font-semibold mt-3 text-white">AI Agent Systems</h3>
+    </div>
+
+  </div>
+
+</section>
 
 {% endblock %}

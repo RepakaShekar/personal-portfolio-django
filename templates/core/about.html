@@ -1,15 +1,36 @@
 {% extends "core/base.html" %}
+{% block title %}About Me{% endblock %}
+
 {% block content %}
 
-<h2>About Me</h2>
+<section class="mb-24">
 
-<p>
-I'm a Python Backend Developer focused on Django, REST APIs, and AI-driven systems.
-I enjoy building real-world projects and sharing knowledge through content and freelancing.
-</p>
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      About Me
+    </h2>
+  </div>
 
-<p>
-My long-term goal is to build intelligent systems that improve productivity and learning.
-</p>
+  <!-- Content Card -->
+  <div class="max-w-4xl mx-auto bg-white/5 backdrop-blur-lg p-10 rounded-2xl border border-white/10 hover:border-indigo-400 transition">
+
+    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+      I'm a <span class="text-indigo-400 font-semibold">Python Backend Developer</span> specializing in 
+      Django, REST APIs, PostgreSQL, and AI-driven systems.
+      I focus on building clean, scalable, and production-ready backend architectures.
+    </p>
+
+    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+      I enjoy creating real-world systems, solving practical problems, and documenting my journey publicly through content creation and freelancing.
+    </p>
+
+    <p class="text-lg text-gray-300 leading-relaxed">
+      My long-term vision is to design intelligent systems that enhance productivity, automate workflows, and improve learning experiences at scale.
+    </p>
+
+  </div>
+
+</section>
 
 {% endblock %}

@@ -1,39 +1,65 @@
 {% extends "core/base.html" %}
+{% block title %}Services{% endblock %}
+
 {% block content %}
 
-<h2>{% block title %}Services{% endblock %}</h2>
-<p class="mb-4">
-I offer backend development, data solutions, and AI-powered systems.
-Each service is customized based on your needs.
-</p>
+<section class="mb-24">
 
-<div class="row">
-  {% for service in services %}
-  <div class="card h-100 shadow-sm border-0">
-    <div class="col-md-4 mb-4">
-      <div class="card h-100">
-        <div class="card-body">
+  <!-- Page Header -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      Services
+    </h2>
+    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+      Backend development, AI-powered systems, and scalable API solutions tailored to your needs.
+    </p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    {% for service in services %}
+      <div class="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-indigo-400 transition duration-300 hover:-translate-y-2 relative">
+
+        <!-- Badge -->
         {% if service.badge == 'popular' %}
-        <span class="badge bg-primary mb-2">Popular</span>
+          <span class="absolute top-4 right-4 px-3 py-1 text-xs bg-indigo-600 rounded-full">Popular</span>
         {% elif service.badge == 'premium' %}
-        <span class="badge bg-warning text-dark mb-2">Premium</span>
+          <span class="absolute top-4 right-4 px-3 py-1 text-xs bg-purple-600 rounded-full">Premium</span>
         {% elif service.badge == 'new' %}
-        <span class="badge bg-success mb-2">New</span>
+          <span class="absolute top-4 right-4 px-3 py-1 text-xs bg-cyan-600 rounded-full">New</span>
         {% endif %}
-          <h5 class="card-title mt-2"><i class="fa-solid fa-code"></i> {{ service.title }}</h5>
-          <p class="card-text">{{ service.description }}</p>
-          <p class="fw-bold text-success">Price: {{ service.price }}</p>
 
-          <ul>
-            {% for feature in service.feature_list %}
-              <li><i class="fa-solid fa-check text-success"></i> {{ feature }}</li>
-            {% endfor %}
-          </ul>
-        </div>
+        <!-- Title -->
+        <h3 class="text-2xl font-semibold mb-4 text-white">
+          {{ service.title }}
+        </h3>
+
+        <!-- Description -->
+        <p class="text-gray-400 mb-4">
+          {{ service.description }}
+        </p>
+
+        <!-- Price -->
+        <p class="text-lg font-semibold text-indigo-400 mb-6">
+          {{ service.price }}
+        </p>
+
+        <!-- Feature List -->
+        <ul class="space-y-3 text-gray-300">
+          {% for feature in service.feature_list %}
+            <li class="flex items-start gap-2">
+              <span class="text-green-400">✔</span>
+              <span>{{ feature }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+
       </div>
-    </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+
+  </div>
+
+</section>
 
 {% endblock %}

@@ -1,23 +1,57 @@
 {% extends "core/base.html" %}
 {% block title %}LifeSync AI Demo{% endblock %}
+
 {% block content %}
 
-<h2>LifeSync AI Demo</h2>
+<section class="mb-24">
 
-<p>This is a suggestion-based demo. No actions are performed automatically.</p>
-<p class="text-muted">This AI provides suggestions only. No actions are taken without user approval.</p>
-
-
-<form method="post">
-  {% csrf_token %}
-  <textarea name="situation" class="form-control mb-3" placeholder="Describe your situation"></textarea>
-  <button class="btn btn-primary">Get AI Suggestion</button>
-</form>
-
-{% if suggestion %}
-  <div class="alert alert-info mt-4">
-    {{ suggestion }}
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      LifeSync AI Demo
+    </h2>
+    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+      An intelligent suggestion system designed to guide decisions and improve productivity.
+    </p>
+    <p class="text-sm text-gray-500 mt-2">
+      This AI provides suggestions only. No actions are taken without your approval.
+    </p>
   </div>
-{% endif %}
+
+  <!-- Form Card -->
+  <div class="max-w-3xl mx-auto bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-cyan-400 transition">
+
+    <form method="post" class="space-y-6">
+      {% csrf_token %}
+
+      <div>
+        <label class="block text-sm text-gray-400 mb-2">
+          Describe Your Situation
+        </label>
+        <textarea name="situation"
+          class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-400"
+          rows="4"
+          placeholder="Explain your current situation or problem..."></textarea>
+      </div>
+
+      <div class="text-center pt-4">
+        <button type="submit"
+          class="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 rounded-xl shadow-lg transition transform hover:scale-105">
+          Get AI Suggestion
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- Suggestion Output -->
+  {% if suggestion %}
+    <div class="max-w-3xl mx-auto mt-10 bg-cyan-500/10 border border-cyan-400 p-6 rounded-xl text-cyan-300">
+      {{ suggestion }}
+    </div>
+  {% endif %}
+
+</section>
 
 {% endblock %}

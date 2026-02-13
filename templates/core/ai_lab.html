@@ -1,53 +1,84 @@
 {% extends "core/base.html" %}
+{% block title %}AI Lab — LifeSync AI{% endblock %}
+
 {% block content %}
 
-<h2>{% block title %}AI Lab — LifeSync AI{% endblock %}</h2>
+<section class="mb-24">
 
-<p class="mb-4">
-LifeSync AI is my personal AI system built using Python.
-It helps me prioritize work, analyze freelance projects,
-plan content, and make better decisions — always with human approval.
-</p>
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      AI Lab — LifeSync AI
+    </h2>
+    <p class="text-gray-400 mt-4 max-w-3xl mx-auto">
+      LifeSync AI is my evolving personal AI system built with Python.  
+      It helps prioritize work, analyze freelance projects, plan content,  
+      and support decision-making — always with human approval.
+    </p>
+  </div>
 
-<div class="alert alert-info">
-  <strong>Note:</strong> LifeSync AI is a real, evolving AI system built in Python.
-  All actions require human approval.
-</div>
+  <!-- Info Notice -->
+  <div class="max-w-3xl mx-auto mb-12 bg-cyan-500/10 border border-cyan-400 text-cyan-300 p-6 rounded-xl">
+    <strong>Note:</strong> LifeSync AI is a real, evolving AI system built in Python.  
+    All actions require explicit human approval.
+  </div>
 
+  <!-- Core Capabilities -->
+  <div class="mb-20">
+    <h3 class="text-2xl font-semibold mb-10 text-center text-white">
+      Core Capabilities
+    </h3>
 
-<h4>Core Capabilities</h4>
+    <div class="grid md:grid-cols-2 gap-10">
+      {% for feature in features %}
+        <div class="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-cyan-400 transition duration-300 hover:-translate-y-2">
 
-<div class="row">
-  {% for feature in features %}
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title">{{ feature.title }}</h5>
-          <p class="card-text">{{ feature.description }}</p>
+          <h4 class="text-xl font-semibold mb-4 text-indigo-400">
+            {{ feature.title }}
+          </h4>
+
+          <p class="text-gray-400 mb-4">
+            {{ feature.description }}
+          </p>
 
           {% if feature.example %}
-            <p><strong>Example:</strong> {{ feature.example }}</p>
+            <div class="bg-black/40 p-4 rounded-lg text-sm text-gray-300 border border-white/10">
+              <span class="text-cyan-400 font-medium">Example:</span>
+              {{ feature.example }}
+            </div>
           {% endif %}
+
         </div>
-      </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-</div>
+  </div>
 
-<hr>
+  <!-- How It Works -->
+  <div class="max-w-3xl mx-auto">
 
-<h4>How It Works</h4>
-<ul>
-  <li>User provides a situation or goal</li>
-  <li>AI analyzes context and priorities</li>
-  <li>AI suggests an action</li>
-  <li>User approval is required</li>
-  <li>Only approved actions are executed</li>
-</ul>
+    <h3 class="text-2xl font-semibold mb-8 text-center text-white">
+      How It Works
+    </h3>
 
-<p class="mt-3">
-This system is continuously evolving as I learn more about AI,
-backend systems, and automation.
-</p>
+    <div class="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10">
+
+      <ol class="space-y-4 text-gray-300 list-decimal list-inside">
+        <li>User provides a situation or goal</li>
+        <li>AI analyzes context, priorities, and constraints</li>
+        <li>AI generates a structured suggestion</li>
+        <li>User reviews and approves the suggestion</li>
+        <li>Only approved actions are executed</li>
+      </ol>
+
+    </div>
+
+    <p class="text-gray-400 mt-8 text-center">
+      This system continuously evolves as I deepen my understanding of AI,
+      backend engineering, and intelligent automation.
+    </p>
+
+  </div>
+
+</section>
 
 {% endblock %}

@@ -1,46 +1,68 @@
 {% extends "core/base.html" %}
-{% block title %}Shekar Repaka | Python Backend & AI Developer{% endblock %}
+{% block title %}Shekar Repaka | Backend Engineer{% endblock %}
 {% block content %}
 
-<div class="text-center py-5">
-  <h1 class="mb-3">I Build Reliable Backend & AI Systems</h1>
+<!-- HERO SECTION -->
+<section class="text-center mb-24">
 
-  <h5 class="text-muted mb-4">
-    Python • Django • REST APIs • AI Automation
-  </h5>
+  <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+    I Build Scalable Backend & AI Systems
+  </h1>
 
-  <p class="lead mb-4">
-    I'm a Python Backend Developer focused on building clean, scalable,
-    and practical systems while learning and freelancing in public.
+  <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+    Python • Django • REST APIs • PostgreSQL • AI Automation  
+    <br class="hidden md:block">
+    Crafting reliable, production-ready backend systems while building in public.
   </p>
 
-  <div class="d-flex justify-content-center gap-3 flex-wrap">
-    <a href="/services/" class="btn btn-primary btn-lg">Hire Me</a>
-    <a href="/projects/" class="btn btn-outline-dark btn-lg">View Projects</a>
-    <a href="/youtube/" class="btn btn-outline-secondary btn-lg">YouTube Journey</a>
-  </div>
-</div>
+  <div class="flex justify-center gap-6 flex-wrap">
 
-<hr class="my-5">
+    <a href="/services/"
+       class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-lg transition transform hover:scale-105">
+       Hire Me
+    </a>
 
-<div class="row text-center">
-  <div class="col-md-4 mb-4">
-    <i class="fa-solid fa-code fa-2x text-primary mb-3"></i>
-    <h5>Backend Development</h5>
-    <p>Django, APIs, databases, authentication, and clean backend logic.</p>
-  </div>
+    <a href="/projects/"
+       class="px-6 py-3 border border-white/20 hover:border-indigo-400 rounded-xl backdrop-blur-md transition transform hover:scale-105">
+       View Projects
+    </a>
 
-  <div class="col-md-4 mb-4">
-    <i class="fa-solid fa-brain fa-2x text-primary mb-3"></i>
-    <h5>AI & Automation</h5>
-    <p>Building LifeSync AI to assist with learning, work, and productivity.</p>
+    <a href="/youtube/"
+       class="px-6 py-3 border border-white/20 hover:border-purple-400 rounded-xl backdrop-blur-md transition transform hover:scale-105">
+       YouTube Journey
+    </a>
+
   </div>
 
-  <div class="col-md-4 mb-4">
-    <i class="fa-solid fa-video fa-2x text-primary mb-3"></i>
-    <h5>Learning in Public</h5>
-    <p>Sharing real backend and AI projects openly through YouTube.</p>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="grid md:grid-cols-3 gap-10 text-center">
+
+  <div class="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-indigo-400 transition">
+    <div class="text-indigo-400 text-3xl mb-4">⚙️</div>
+    <h3 class="text-xl font-semibold mb-3">Backend Development</h3>
+    <p class="text-gray-400">
+      Designing APIs, authentication systems, databases, and scalable backend architecture using Django & DRF.
+    </p>
   </div>
-</div>
+
+  <div class="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-purple-400 transition">
+    <div class="text-purple-400 text-3xl mb-4">🤖</div>
+    <h3 class="text-xl font-semibold mb-3">AI & Automation</h3>
+    <p class="text-gray-400">
+      Building intelligent automation systems and AI-powered productivity tools.
+    </p>
+  </div>
+
+  <div class="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-cyan-400 transition">
+    <div class="text-cyan-400 text-3xl mb-4">🎥</div>
+    <h3 class="text-xl font-semibold mb-3">Learning in Public</h3>
+    <p class="text-gray-400">
+      Sharing backend systems, freelancing journey, and AI experiments transparently.
+    </p>
+  </div>
+
+</section>
 
 {% endblock %}
